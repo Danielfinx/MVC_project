@@ -1,1 +1,4 @@
 url.txt
+.env
+/vendor/
+index2.php
