@@ -2,3 +2,5 @@ url.txt
 .env
 /vendor/
 index2.php
+custom_error.log
+/vendor/
