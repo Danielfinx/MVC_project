@@ -1,9 +1,11 @@
 <?php
+
+    require_once "./models/database.php";
     
     if (!isset($_GET["c"])) {
         require_once "./controllers/start.controller.php";
         $controller = new StartController();
-        call_user_func(array($controller, "start"));
+        $controller->start();
     } else {
         $controller = $_GET["c"];
         require_once "./controllers/{$controller}.controller.php";
