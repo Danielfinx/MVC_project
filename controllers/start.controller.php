@@ -10,6 +10,8 @@
         public function start() {
             Database::initialize();
             $db = Database::connect();
-            require_once "./views/start/main.php";
+            require_once "views/header.php";
+            require_once "views/start/main.php";
+            require_once "views/footer.php";
         }
     }
