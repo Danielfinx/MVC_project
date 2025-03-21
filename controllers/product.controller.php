@@ -1,7 +1,8 @@
-<?php
-    require_once "models/product.php";
+<?php 
 
-    class StartController {
+    require_once "models/product.php";  
+
+    class ProductController {
         private $model;
 
         public function __construct() {
@@ -9,10 +10,9 @@
         }
 
         public function start() {
-            Database::initialize();
-            $db = Database::connect();
             require_once "views/header.php";
-            require_once "views/start/main.php";
+            require_once "views/product/main.php";
             require_once "views/footer.php";
         }
     }
+?>

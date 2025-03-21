@@ -16,7 +16,7 @@
   <body class="sidebar-mini fixed">
     <div class="wrapper">
       <!-- Navbar-->
-      <header class="main-header hidden-print"><a class="logo" href="index.html">MVC Project</a>
+      <header class="main-header hidden-print"><a class="logo" href="index.php">MVC Project</a>
         <nav class="navbar navbar-static-top">
           <!-- Sidebar toggle button--><a class="sidebar-toggle" href="#" data-toggle="offcanvas"></a>
           <!-- Navbar Right Menu-->
@@ -51,7 +51,7 @@
       <aside class="main-sidebar hidden-print">
         <section class="sidebar">
           <div class="user-panel">
-            <div class="pull-left image"><img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image"></div>
+            <div class="pull-left image"><img class="img-circle" src="assets/images/user.png" alt="User Image"></div>
             <div class="pull-left info">
               <p>John Doe</p>
               <p class="designation">Frontend Developer</p>
@@ -59,10 +59,10 @@
           </div>
           <!-- Sidebar Menu-->
           <ul class="sidebar-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
-            <li class="treeview"><a href="#"><i class="fa fa-laptop"></i><span>UI Elements</span><i class="fa fa-angle-right"></i></a>
+            <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+            <li class="treeview"><a href="#"><i class="fa fa-laptop"></i><span>Products</span><i class="fa fa-angle-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="bootstrap-components.html"><i class="fa fa-circle-o"></i> Bootstrap Elements</a></li>
+                <li><a href="?c=product"><i class="fa fa-circle-o"></i> Products List </a></li>
                 <li><a href="ui-font-awesome.html"><i class="fa fa-circle-o"></i> Font Icons</a></li>
                 <li><a href="ui-cards.html"><i class="fa fa-circle-o"></i> Cards</a></li>
                 <li><a href="widgets.html"><i class="fa fa-circle-o"></i> Widgets</a></li>
