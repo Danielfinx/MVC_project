@@ -73,17 +73,17 @@
 
         public function Amount() {
             try {
-                $query= $this->conn->prepare("SELECT SUM(pro_amnt) FROM product");
+                $query= $this->conn->prepare("SELECT SUM(prod_amnt) as Amount FROM products");
                 $query->execute();
                 return $query->fetch(PDO::FETCH_OBJ);
-            } catch (Exception $e) {
+            } catch (Throwable $e) {
                 die($e->getMessage());
             }
         }
         
         public function List () {
             try {
-                $query= $this->conn->prepare("SELECT * FROM product");
+                $query= $this->conn->prepare("SELECT * FROM products");
                 $query->execute();
                 return $query->fetchAll(PDO::FETCH_OBJ);
             } catch (Exception $e) {
