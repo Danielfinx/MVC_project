@@ -9,9 +9,9 @@
             </ul>
           </div>
           <div>
-            <a class="btn btn-primary btn-flat" href="?c=product&a=addForm"><i class="fa fa-lg fa-plus"></i></a>
-            <a class="btn btn-info btn-flat" href="#"><i class="fa fa-lg fa-refresh"></i></a>
-            <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+            
+          <a class="btn btn-primary btn-flat" href="?c=product&a=productForm"><i class="fa fa-lg fa-plus"></i></a>
+            
           </div>
         </div>
         <div class="row">
@@ -33,15 +33,18 @@
                   </thead>
                   <tbody>
                     <?php foreach ($this->model->list() as $r): ?>
-                    <tr>
-                      <td><?= $r->prod_id ?></td>
-                      <td><?= $r->prod_name ?></td>
-                      <td><?= $r->prod_brand ?></td>
-                      <td><?= $r->prod_cost ?></td>
-                      <td><?= $r->prod_price ?></td>
-                      <td><?= $r->prod_amnt ?></td>
-                      <td><?= $r->prod_img ?></td>
-                      <td>Add | Delete</td>
+                      <tr>
+                        <td><?= $r->prod_id ?></td>
+                        <td><?= $r->prod_name ?></td>
+                        <td><?= $r->prod_brand ?></td>
+                        <td><?= $r->prod_cost ?></td>
+                        <td><?= $r->prod_price ?></td>
+                        <td><?= $r->prod_amnt ?></td>
+                        <td><?= $r->prod_img ?></td>
+                        <td>
+                          <a class="btn btn-info btn-flat" href="?c=product&a=productForm&id=<?= $r->prod_id ?>"><i class="fa fa-lg fa-refresh"></i></a>
+                          <a class="btn btn-warning btn-flat" href="?c=product&a=delete&id=<?= $r->prod_id ?>"><i class="fa fa-lg fa-trash"></i></a>
+                      </td>
                     </tr>
                     <?php endforeach; ?>
                   </tbody>

@@ -15,9 +15,19 @@
             require_once "views/footer.php";
         }
 
-        public function addForm() {
+        public function productForm() {
+            
+            $title = "Add";
+            $action = "register a new";
+
+            if (isset($_GET['id'])) {
+                $p = $this->model->get($_GET['id']);
+                $title = "Edit";
+                $action = "modify an existing";
+            }
+
             require_once "views/header.php";
-            require_once "views/product/addForm.php";
+            require_once "views/product/productForm.php";
             require_once "views/footer.php";
         }
 
@@ -32,8 +42,17 @@
             $p->setProd_amnt($_POST['Amount']);
             // $p->setProd_img($_POST['Image']);
 
-            $this->model->insert($p);
+            if ($p->getProd_id() > 0)
+                $this->model->update($p);
+            else {
+                $this->model->insert($p);
+            }
 
+            header("Location: ?c=product");
+        }
+
+        public function delete() {
+            $this->model->delete($_GET['id']);
             header("Location: ?c=product");
         }
     }

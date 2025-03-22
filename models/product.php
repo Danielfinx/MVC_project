@@ -90,6 +90,28 @@
                 die($e->getMessage());
             }
         }
+        
+        public function Get ($id) {
+            try {
+                $query= $this->conn->prepare("SELECT * FROM products WHERE prod_id = ?");
+                $query->execute([$id]);
+
+                $r= $query->fetch(PDO::FETCH_OBJ);
+                $p = new Product();
+
+                $p->setProd_id($r->prod_id);
+                $p->setProd_name($r->prod_name);
+                $p->setProd_brand($r->prod_brand);
+                $p->setProd_cost($r->prod_cost);
+                $p->setProd_price($r->prod_price);
+                $p->setProd_amnt($r->prod_amnt);
+                // $p->setProd_img($r->prod_img);
+
+                return $p;
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
 
         public function insert(Product $p) {
             try {
@@ -97,12 +119,50 @@
                 ->prepare("INSERT 
                             INTO products (prod_name, prod_brand, prod_cost, prod_price, prod_amnt) 
                             VALUES (?, ?, ?, ?, ?)");
+
                 $query->execute([
                     $p->getProd_name(),
                     $p->getProd_brand(),
                     $p->getProd_cost(),
                     $p->getProd_price(),
                     $p->getProd_amnt()
+                ]);
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function update(Product $p) {
+            try {
+                $query= $this->conn
+                ->prepare("UPDATE products
+                            SET prod_name = ?,
+                                prod_brand = ?,
+                                prod_cost = ?,
+                                prod_price = ?,
+                                prod_amnt = ?
+                            WHERE prod_id = ?");
+
+                $query->execute([
+                    $p->getProd_name(),
+                    $p->getProd_brand(),
+                    $p->getProd_cost(),
+                    $p->getProd_price(),
+                    $p->getProd_amnt(),
+                    $p->getProd_id()
+                ]);
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
+
+        public function delete(int $id) {
+            try {
+                $query= $this->conn
+                ->prepare("DELETE FROM products WHERE prod_id = ?");
+
+                $query->execute([
+                    $id
                 ]);
             } catch (Exception $e) {
                 die($e->getMessage());
