@@ -89,6 +89,24 @@
             } catch (Exception $e) {
                 die($e->getMessage());
             }
-        } 
+        }
+
+        public function insert(Product $p) {
+            try {
+                $query= $this->conn
+                ->prepare("INSERT 
+                            INTO products (prod_name, prod_brand, prod_cost, prod_price, prod_amnt) 
+                            VALUES (?, ?, ?, ?, ?)");
+                $query->execute([
+                    $p->getProd_name(),
+                    $p->getProd_brand(),
+                    $p->getProd_cost(),
+                    $p->getProd_price(),
+                    $p->getProd_amnt()
+                ]);
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }
 
     }
