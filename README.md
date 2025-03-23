@@ -1,45 +1,74 @@
 ![](https://img.shields.io/badge/Uneweb-blue)
 
-# Project Name
+# Product Management System
 
-> One paragraph statement about the project.
+> A web-based application for managing products, built using the MVC (Model-View-Controller) architecture. This project allows users to perform CRUD (Create, Read, Update, Delete) operations on products, view notifications, and navigate through a user-friendly interface.
 
-![screenshot](./app_screenshot.png)
+<!-- ![screenshot](./app_screenshot.png) -->
 
-Additional description about the project and its features.
+This project is designed to demonstrate the implementation of a modular and scalable architecture using PHP, with a focus on separation of concerns and clean code practices.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- **Languages**: PHP, HTML, CSS, JavaScript
+- **Frameworks**: Bootstrap (for UI styling)
+- **Database**: MySQL
+- **Tools**: phpMyAdmin, Composer (for dependency management)
+
+## Features
+
+- Add, edit, delete, and list products.
+- Sidebar navigation for easy access to different sections.
+- Notifications menu for user updates.
+- User-friendly interface with responsive design.
+- Built using the MVC architecture for better code organization.
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+> No live demo available at the moment. This project is intended for local development and testing.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running, follow these simple steps:
 
 ### Prerequisites
 
+- PHP 7.4 or higher
+- MySQL
+- Composer
+- A local server environment (e.g., XAMPP, WAMP, or MAMP)
+
 ### Setup
 
-### Install
+1. Clone the repository:
 
-### Usage
+   ```bash
+   git clone https://github.com/your-username/MVC_project.git
+   ```
 
-### Run tests
+2. Navigate to the project directory:
 
-### Deployment
+   ```bash
+   cd MVC_project
+   ```
 
+3. Install dependencies using Composer:
 
+   ```bash
+   composer install
+   ```
+
+4. Import the database:
+
+   Open phpMyAdmin or your preferred MySQL client.
+   Import the `MVC_project.sql` file located in the `db` folder.
+
+5. Configure environment variables:
+
+   Create a bash `.env` file in the root directory.
+   Add the corresponding variables:
+
+6. Start your local server and access the project in your browser
 
 ## Authors
 
