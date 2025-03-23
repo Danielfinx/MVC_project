@@ -38,9 +38,9 @@
               <!-- User Menu-->
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
                 <ul class="dropdown-menu settings-menu">
-                  <li><a href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
-                  <li><a href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-                  <li><a href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+                  <li><a href="#"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+                  <li><a href="#"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+                  <li><a href="#"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
                 </ul>
               </li>
             </ul>
@@ -63,12 +63,12 @@
             <li class="treeview"><a href="#"><i class="fa fa-laptop"></i><span>Products</span><i class="fa fa-angle-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="?c=product"><i class="fa fa-circle-o"></i> Products List </a></li>
-                <li><a href="ui-font-awesome.html"><i class="fa fa-circle-o"></i> Font Icons</a></li>
+                <!-- <li><a href="ui-font-awesome.html"><i class="fa fa-circle-o"></i> Font Icons</a></li>
                 <li><a href="ui-cards.html"><i class="fa fa-circle-o"></i> Cards</a></li>
-                <li><a href="widgets.html"><i class="fa fa-circle-o"></i> Widgets</a></li>
+                <li><a href="widgets.html"><i class="fa fa-circle-o"></i> Widgets</a></li> -->
               </ul>
             </li>
-            <li><a href="charts.html"><i class="fa fa-pie-chart"></i><span>Charts</span></a></li>
+            <!-- <li><a href="charts.html"><i class="fa fa-pie-chart"></i><span>Charts</span></a></li>
             <li class="treeview"><a href="#"><i class="fa fa-edit"></i><span>Forms</span><i class="fa fa-angle-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="form-components.html"><i class="fa fa-circle-o"></i> Form Components</a></li>
@@ -105,7 +105,7 @@
                   </ul>
                 </li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </section>
       </aside>
